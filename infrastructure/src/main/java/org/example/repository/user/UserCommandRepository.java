@@ -1,6 +1,6 @@
 package org.example.repository.user;
 
-import org.example.user.User;
+import org.example.entities.user.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.UUID;

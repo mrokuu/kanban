@@ -2,7 +2,7 @@ package org.example.query.task;
 
 import lombok.RequiredArgsConstructor;
 import org.example.repository.task.TaskQueryReposiroty;
-import org.example.task.Task;
+import org.example.entities.task.Task;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 

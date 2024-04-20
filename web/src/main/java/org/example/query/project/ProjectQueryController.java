@@ -1,7 +1,8 @@
 package org.example.query.project;
 
 import lombok.RequiredArgsConstructor;
-import org.example.project.Project;
+import org.example.entities.project.Project;
+import org.example.id.ProjectId;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

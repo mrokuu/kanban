@@ -1,10 +1,10 @@
 package org.example.query.project;
 
 import lombok.RequiredArgsConstructor;
-import org.example.project.Project;
+import org.example.entities.project.Project;
+import org.example.id.ProjectId;
 import org.example.repository.project.ProjectQueryRepository;
 import org.springframework.data.domain.Sort;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

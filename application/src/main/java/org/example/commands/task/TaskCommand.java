@@ -2,7 +2,7 @@ package org.example.commands.task;
 
 import lombok.RequiredArgsConstructor;
 import org.example.repository.task.TaskCommandRepository;
-import org.example.task.Task;
+import org.example.entities.task.Task;
 import org.springframework.stereotype.Service;
 
 @Service

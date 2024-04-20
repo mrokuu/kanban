@@ -2,10 +2,8 @@ package org.example.commands.user;
 
 import lombok.RequiredArgsConstructor;
 import org.example.repository.user.UserCommandRepository;
-import org.example.user.User;
+import org.example.entities.user.User;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 @RequiredArgsConstructor

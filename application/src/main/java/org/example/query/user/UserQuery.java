@@ -3,7 +3,7 @@ package org.example.query.user;
 
 import lombok.RequiredArgsConstructor;
 import org.example.repository.user.UserQueryRepository;
-import org.example.user.User;
+import org.example.entities.user.User;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 

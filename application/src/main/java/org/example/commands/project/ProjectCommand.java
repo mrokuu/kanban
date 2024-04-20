@@ -1,7 +1,7 @@
 package org.example.commands.project;
 
 import lombok.RequiredArgsConstructor;
-import org.example.project.Project;
+import org.example.entities.project.Project;
 import org.example.repository.project.ProjectCommandRepository;
 import org.springframework.stereotype.Service;
 
