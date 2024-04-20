@@ -1,4 +1,4 @@
-package org.example.progress;
+package org.example.enums.progress;
 
 public enum Progress {
 

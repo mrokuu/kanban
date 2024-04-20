@@ -8,9 +8,13 @@ import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.example.progress.Progress;
+import org.example.enums.progress.Progress;
+import org.example.id.TaskId;
 import org.example.project.Project;
 import org.example.user.User;
+import org.example.valueobjects.Description;
+import org.example.valueobjects.Name;
+import org.example.valueobjects.Priority;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -22,19 +26,25 @@ import java.util.UUID;
 @Entity(name = "tasks")
 public class Task {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID id;
+    @EmbeddedId
+    private TaskId id;
 
-    @NotNull
-    @Size(min = 3, max = 30)
-    private String name;
+    @Embedded
+    @AttributeOverrides({
+            @AttributeOverride(name = "value", column = @Column(name = "name", nullable = false))
+    })
+    private Name name;
+    @Embedded
+    @AttributeOverrides({
+            @AttributeOverride(name = "value", column = @Column(name = "description", nullable = false))
+    })
+    private Description description;
 
-    private String description;
-
-    @Min(0)
-    @Max(3)
-    private Integer priority;
+    @Embedded
+    @AttributeOverrides({
+            @AttributeOverride(name = "value", column = @Column(name = "priority", nullable = false))
+    })
+    private Priority priority;
 
     private Progress progress;
 
@@ -62,12 +72,6 @@ public class Task {
         user.getTasks().remove(this);
     }
 
-    public Task(@NotNull @Size(min = 3, max = 30) String name, String description, @Size(min = 0, max = 3) Integer priority, Progress progress, Project project) {
-        this.name = name;
-        this.description = description;
-        this.priority = priority;
-        this.progress = progress;
-        this.project = project;
-    }
+
 
 }
