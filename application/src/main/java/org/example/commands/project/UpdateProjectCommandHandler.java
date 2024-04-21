@@ -11,14 +11,15 @@ import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-public class CreateProjectCommandHandler implements RequestHandler<CreateProjectCommand, DataResult<ProjectDto>> {
-    private final ProjectCommandRepository projectCommandRepository;
+public class UpdateProjectCommandHandler implements RequestHandler<UpdateProjectCommand, DataResult<ProjectDto>> {
 
+    private final ProjectCommandRepository projectCommandRepository;
     @Override
-    public DataResult<ProjectDto> handle(CreateProjectCommand command) {
-        Project project = projectCommandRepository.save(mapToProject(command));
-        return new SuccessDataResult<>(maptoProjectDto(project), "Project has been created!!!");
+    public DataResult<ProjectDto> handle(UpdateProjectCommand command) {
+         Project project = projectCommandRepository.save(mapToProject(command));
+        return new SuccessDataResult<>(maptoProjectDto(project), "Project has been updated!!!");
     }
+
 
     private ProjectDto maptoProjectDto(Project project) {
         return ProjectDto.builder()
@@ -30,7 +31,7 @@ public class CreateProjectCommandHandler implements RequestHandler<CreateProject
                 .build();
     }
 
-    private Project mapToProject(CreateProjectCommand command) {
+    private Project mapToProject(UpdateProjectCommand command) {
         return Project.builder()
                 .id(command.projectId())
                 .name(command.name())

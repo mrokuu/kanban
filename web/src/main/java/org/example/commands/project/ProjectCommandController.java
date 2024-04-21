@@ -33,8 +33,8 @@ public class ProjectCommandController extends BaseController {
 //    }
 
     @PostMapping("/create")
-    public ResponseEntity<DataResult<ProjectDto>> createProject(@RequestBody CreateProjectCommand project){
-    return ResponseEntity.ok(mediator.send(project));
+    public ResponseEntity<DataResult<ProjectDto>> createProject(@RequestBody CreateProjectCommand command){
+    return ResponseEntity.ok(mediator.send(command));
     }
  
 
@@ -48,4 +48,9 @@ public class ProjectCommandController extends BaseController {
 //            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 //        }
 //    }
+
+        @PutMapping("/update")
+    public ResponseEntity<DataResult<ProjectDto>> updateProject(@RequestBody UpdateProjectCommand command){
+      return ResponseEntity.ok(mediator.send(command));
+    }
 }
