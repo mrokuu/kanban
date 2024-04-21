@@ -9,8 +9,7 @@ import org.example.mediator.response.SuccessDataResult;
 import org.example.repository.project.ProjectCommandRepository;
 import org.springframework.stereotype.Service;
 
-import static org.example.mapper.project.ProjectMapper.mapToCreateProject;
-import static org.example.mapper.project.ProjectMapper.maptoProjectDto;
+
 
 @Service
 @RequiredArgsConstructor
@@ -21,6 +20,28 @@ public class CreateProjectCommandHandler implements RequestHandler<CreateProject
     public DataResult<ProjectDto> handle(CreateProjectCommand command) {
         Project project = projectCommandRepository.save(mapToCreateProject(command));
         return new SuccessDataResult<>(maptoProjectDto(project), "Project has been created!!!");
+    }
+
+
+    private ProjectDto maptoProjectDto(Project project) {
+        return ProjectDto.builder()
+                .projectId(project.getId())
+                .name(project.getName())
+                .description(project.getDescription())
+                .numberWip(project.getNumberWip())
+                .users(project.getUsers())
+                .build();
+    }
+
+    public static Project mapToCreateProject(CreateProjectCommand command) {
+        return Project.builder()
+                .id(command.projectId())
+                .name(command.name())
+                .description(command.description())
+                .numberWip(command.numberWip())
+                .leaderUser(command.user())
+                .users(command.users())
+                .build();
     }
 
 
