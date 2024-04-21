@@ -2,6 +2,7 @@ package org.example.entities.task;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.example.entities.project.Project;
@@ -17,6 +18,7 @@ import java.util.Set;
 import java.util.UUID;
 
 @Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity(name = "tasks")
@@ -26,7 +28,7 @@ public class Task {
 //    private TaskId id;
 @Id
 @GeneratedValue(strategy = GenerationType.UUID)
-private UUID id;
+    private UUID id;
 
     @Embedded
     @AttributeOverrides({
@@ -47,7 +49,7 @@ private UUID id;
 
     private Progress progress;
 
-    @ManyToOne
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "project_id", nullable = false)
     private Project project;
 
@@ -61,15 +63,6 @@ private UUID id;
     )
     private Set<User> users = new HashSet<>();
 
-    public void addUser(User user) {
-        this.users.add(user);
-        user.getTasks().add(this);
-    }
-
-    public void removeUser(User user) {
-        this.users.remove(user);
-        user.getTasks().remove(this);
-    }
 
 
 
