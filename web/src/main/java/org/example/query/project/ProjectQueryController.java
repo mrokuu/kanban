@@ -39,4 +39,18 @@ public class ProjectQueryController {
         }
     }
 
+    @GetMapping("/allByLeaderUser/{id}")
+    public ResponseEntity<List<Project>> findAllByLeaderUser_Id(@PathVariable("id") UUID id) {
+        List<Project> projects = projectQuery.findAllByLeaderUserId(id);
+
+        return new ResponseEntity<>(projects, HttpStatus.OK);
+    }
+
+    @GetMapping("/allByUser/{id}")
+    public ResponseEntity<List<Project>> findAllByUsers_Id(@PathVariable("id") UUID id) {
+        List<Project> projects = projectQuery.findAllByUsersId(id);
+
+        return new ResponseEntity<>(projects, HttpStatus.OK);
+    }
+
 }
