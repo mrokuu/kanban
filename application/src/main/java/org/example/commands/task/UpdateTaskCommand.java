@@ -1,11 +1,10 @@
 package org.example.commands.task;
 
-import org.example.commands.project.CreateProjectCommandHandler;
 import org.example.entities.project.Project;
 import org.example.entities.user.User;
 import org.example.enums.progress.Progress;
-import org.example.mediator.Handler;
-import org.example.mediator.Request;
+import org.example.dispacher.Handler;
+import org.example.dispacher.Request;
 import org.example.valueobjects.Description;
 import org.example.valueobjects.Name;
 import org.example.valueobjects.Priority;

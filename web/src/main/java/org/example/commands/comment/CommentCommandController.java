@@ -1,11 +1,9 @@
 package org.example.commands.comment;
 
 import org.example.BaseController;
-import org.example.commands.project.CreateProjectCommand;
 import org.example.dtos.CommentDto;
-import org.example.dtos.ProjectDto;
-import org.example.mediator.Mediator;
-import org.example.mediator.response.DataResult;
+import org.example.dispacher.Mediator;
+import org.example.dispacher.response.DataResult;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

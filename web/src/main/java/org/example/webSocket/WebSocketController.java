@@ -1,9 +1,8 @@
 package org.example.webSocket;
 
 import org.example.BaseController;
-import org.example.commands.task.UpdateTaskCommand;
 import org.example.entities.task.Task;
-import org.example.mediator.Mediator;
+import org.example.dispacher.Mediator;
 import org.springframework.messaging.handler.annotation.DestinationVariable;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.SendTo;

@@ -1,13 +1,11 @@
 package org.example.commands.comment;
 
 import lombok.RequiredArgsConstructor;
-import org.example.commands.project.CreateProjectCommand;
 import org.example.dtos.CommentDto;
-import org.example.dtos.ProjectDto;
 import org.example.entities.comment.Comment;
-import org.example.mediator.RequestHandler;
-import org.example.mediator.response.DataResult;
-import org.example.mediator.response.SuccessDataResult;
+import org.example.dispacher.RequestHandler;
+import org.example.dispacher.response.DataResult;
+import org.example.dispacher.response.SuccessDataResult;
 import org.example.repository.comment.CommentCommandRepository;
 import org.springframework.stereotype.Service;
 

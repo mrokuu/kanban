@@ -1,7 +1,7 @@
 package org.example;
 
 import lombok.RequiredArgsConstructor;
-import org.example.mediator.Mediator;
+import org.example.dispacher.Mediator;
 
 @RequiredArgsConstructor
 public abstract class BaseController {

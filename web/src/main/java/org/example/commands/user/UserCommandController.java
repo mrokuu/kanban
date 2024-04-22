@@ -1,15 +1,10 @@
 package org.example.commands.user;
 
-import lombok.RequiredArgsConstructor;
 import org.example.BaseController;
-import org.example.commands.task.CreateTaskCommand;
 import org.example.commands.task.UpdateTaskCommand;
-import org.example.dtos.TaskDto;
 import org.example.dtos.UserDto;
-import org.example.entities.user.User;
-import org.example.mediator.Mediator;
-import org.example.mediator.response.DataResult;
-import org.springframework.http.HttpStatus;
+import org.example.dispacher.Mediator;
+import org.example.dispacher.response.DataResult;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

@@ -3,9 +3,9 @@ package org.example.commands.task;
 import lombok.RequiredArgsConstructor;
 import org.example.dtos.TaskDto;
 import org.example.entities.task.Task;
-import org.example.mediator.RequestHandler;
-import org.example.mediator.response.DataResult;
-import org.example.mediator.response.SuccessDataResult;
+import org.example.dispacher.RequestHandler;
+import org.example.dispacher.response.DataResult;
+import org.example.dispacher.response.SuccessDataResult;
 import org.example.repository.task.TaskCommandRepository;
 import org.springframework.stereotype.Service;
 

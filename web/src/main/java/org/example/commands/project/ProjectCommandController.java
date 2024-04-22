@@ -1,17 +1,12 @@
 package org.example.commands.project;
 
 
-import lombok.RequiredArgsConstructor;
 import org.example.BaseController;
 import org.example.dtos.ProjectDto;
-import org.example.entities.project.Project;
-import org.example.mediator.Mediator;
-import org.example.mediator.response.DataResult;
-import org.springframework.http.HttpStatus;
+import org.example.dispacher.Mediator;
+import org.example.dispacher.response.DataResult;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.UUID;
 
 @RestController
 @RequestMapping("/api/project")

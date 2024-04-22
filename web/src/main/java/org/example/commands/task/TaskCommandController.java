@@ -1,12 +1,9 @@
 package org.example.commands.task;
 
-import lombok.RequiredArgsConstructor;
 import org.example.BaseController;
 import org.example.dtos.TaskDto;
-import org.example.entities.task.Task;
-import org.example.mediator.Mediator;
-import org.example.mediator.response.DataResult;
-import org.springframework.http.HttpStatus;
+import org.example.dispacher.Mediator;
+import org.example.dispacher.response.DataResult;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

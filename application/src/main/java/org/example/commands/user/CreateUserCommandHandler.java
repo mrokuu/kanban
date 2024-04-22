@@ -1,13 +1,11 @@
 package org.example.commands.user;
 
 import lombok.RequiredArgsConstructor;
-import org.example.commands.task.CreateTaskCommand;
-import org.example.dtos.TaskDto;
 import org.example.dtos.UserDto;
 import org.example.entities.user.User;
-import org.example.mediator.RequestHandler;
-import org.example.mediator.response.DataResult;
-import org.example.mediator.response.SuccessDataResult;
+import org.example.dispacher.RequestHandler;
+import org.example.dispacher.response.DataResult;
+import org.example.dispacher.response.SuccessDataResult;
 import org.example.repository.user.UserCommandRepository;
 import org.springframework.stereotype.Service;
 
