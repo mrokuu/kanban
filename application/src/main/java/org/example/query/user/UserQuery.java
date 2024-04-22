@@ -23,4 +23,8 @@ public class UserQuery {
     public User getUser(UUID id) {
         return userQueryRepository.findById(id).orElse(null);
     }
+
+    public User getUserByEmail(String email) {
+        return userQueryRepository.findByEmail(email);
+    }
 }
