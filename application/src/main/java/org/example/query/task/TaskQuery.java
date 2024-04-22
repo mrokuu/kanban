@@ -21,4 +21,16 @@ public class TaskQuery {
     public Task getTask(UUID id) {
         return taskQueryReposiroty.findById(id).orElse(null);
     }
+
+    public List<Task> findAllByProjectId(UUID id) {
+        return null;
+    }
+
+    public List<Task> findAllByProjectIdAndUsersId(UUID projectId, UUID userId) {
+        return null;
+    }
+
+    public List<Task> findAllByUsersId(UUID id) {
+        return null;
+    }
 }

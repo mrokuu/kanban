@@ -22,4 +22,12 @@ public class ProjectQuery {
     public Project getProject(UUID id) {
         return projectQueryRepository.findById(id).orElse(null);
     }
+
+    public List<Project> findAllByLeaderUserId(UUID id) {
+        return projectQueryRepository.findAllByLeaderUserId(id);
+    }
+
+    public List<Project> findAllByUsersId(UUID id) {
+        return projectQueryRepository.findAllByUsersId(id);
+    }
 }

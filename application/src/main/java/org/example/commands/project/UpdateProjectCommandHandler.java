@@ -9,6 +9,8 @@ import org.example.mediator.response.SuccessDataResult;
 import org.example.repository.project.ProjectCommandRepository;
 import org.springframework.stereotype.Service;
 
+
+
 @Service
 @RequiredArgsConstructor
 public class UpdateProjectCommandHandler implements RequestHandler<UpdateProjectCommand, DataResult<ProjectDto>> {
@@ -16,12 +18,11 @@ public class UpdateProjectCommandHandler implements RequestHandler<UpdateProject
     private final ProjectCommandRepository projectCommandRepository;
     @Override
     public DataResult<ProjectDto> handle(UpdateProjectCommand command) {
-         Project project = projectCommandRepository.save(mapToProject(command));
+         Project project = projectCommandRepository.save(mapToUpdateProject(command));
         return new SuccessDataResult<>(maptoProjectDto(project), "Project has been updated!!!");
     }
 
-
-    private ProjectDto maptoProjectDto(Project project) {
+    public static ProjectDto maptoProjectDto(Project project) {
         return ProjectDto.builder()
                 .projectId(project.getId())
                 .name(project.getName())
@@ -31,7 +32,7 @@ public class UpdateProjectCommandHandler implements RequestHandler<UpdateProject
                 .build();
     }
 
-    private Project mapToProject(UpdateProjectCommand command) {
+    public static Project mapToUpdateProject(UpdateProjectCommand command) {
         return Project.builder()
                 .id(command.projectId())
                 .name(command.name())
@@ -41,4 +42,5 @@ public class UpdateProjectCommandHandler implements RequestHandler<UpdateProject
                 .users(command.users())
                 .build();
     }
+
 }

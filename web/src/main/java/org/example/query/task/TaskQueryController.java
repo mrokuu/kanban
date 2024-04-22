@@ -36,4 +36,27 @@ public class TaskQueryController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
+
+
+    @GetMapping("/allByUser/{id}")
+    public ResponseEntity<List<Task>> findAllByUsersId(@PathVariable("id") UUID id) {
+        List<Task> tasks = taskQuery.findAllByUsersId(id);
+
+        return new ResponseEntity<>(tasks, HttpStatus.OK);
+    }
+
+    @GetMapping("/allByProject/{id}")
+    public ResponseEntity<List<Task>> findAllByProjectId(@PathVariable("id") UUID id) {
+        List<Task> tasks = taskQuery.findAllByProjectId(id);
+
+        return new ResponseEntity<>(tasks, HttpStatus.OK);
+    }
+
+    @GetMapping("/allByProjectAndUser/{projectId}/{user_ID}")
+    public ResponseEntity<List<Task>> findAllByProjectIdAndUsersId(@PathVariable("projectId") UUID project_ID, @PathVariable("user_ID") UUID user_ID) {
+        List<Task> tasks = taskQuery.findAllByProjectIdAndUsersId(project_ID, user_ID);
+
+        return new ResponseEntity<>(tasks, HttpStatus.OK);
+    }
+
 }

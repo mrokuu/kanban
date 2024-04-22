@@ -56,15 +56,6 @@ public class Project
     )
     private Set<User> users = new HashSet<>();
 
-    public void addUser(User user) {
-        this.users.add(user);
-        user.getProjects().add(this);
-    }
-
-    public void removeUser(User user) {
-        this.users.remove(user);
-        user.getProjects().remove(this);
-    }
 
 
 }
