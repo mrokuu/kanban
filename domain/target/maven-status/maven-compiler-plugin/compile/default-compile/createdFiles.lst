@@ -1,0 +1,12 @@
+org/example/dtos/ProjectDto$ProjectDtoBuilder.class
+org/example/entities/user/User$UserBuilder.class
+org/example/dtos/ProjectDto.class
+org/example/entities/project/Project.class
+org/example/entities/task/Task$TaskBuilder.class
+org/example/dtos/UserDto$UserDtoBuilder.class
+org/example/dtos/TaskDto$TaskDtoBuilder.class
+org/example/dtos/UserDto.class
+org/example/entities/user/User.class
+org/example/entities/project/Project$ProjectBuilder.class
+org/example/entities/task/Task.class
+org/example/dtos/TaskDto.class

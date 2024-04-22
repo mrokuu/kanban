@@ -1,0 +1,10 @@
+org/example/valueobjects/Description.class
+org/example/id/ProjectId.class
+org/example/enums/progress/Progress.class
+org/example/valueobjects/NumberWip.class
+org/example/id/TaskId.class
+org/example/valueobjects/Email.class
+org/example/valueobjects/Name.class
+org/example/valueobjects/Password.class
+org/example/id/UserId.class
+org/example/valueobjects/Priority.class

@@ -1,0 +1,6 @@
+org/example/repository/user/UserQueryRepository.class
+org/example/repository/task/TaskQueryReposiroty.class
+org/example/repository/user/UserCommandRepository.class
+org/example/repository/project/ProjectCommandRepository.class
+org/example/repository/project/ProjectQueryRepository.class
+org/example/repository/task/TaskCommandRepository.class

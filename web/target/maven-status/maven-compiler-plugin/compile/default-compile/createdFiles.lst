@@ -1,0 +1,8 @@
+org/example/commands/task/TaskCommandController.class
+org/example/Main.class
+org/example/query/user/UserQueryController.class
+org/example/commands/project/ProjectCommandController.class
+org/example/query/task/TaskQueryController.class
+org/example/BaseController.class
+org/example/query/project/ProjectQueryController.class
+org/example/commands/user/UserCommandController.class

@@ -1,0 +1,6 @@
+/Users/adammroczkowski/IdeaProjects/kanban/infrastructure/src/main/java/org/example/repository/task/TaskCommandRepository.java
+/Users/adammroczkowski/IdeaProjects/kanban/infrastructure/src/main/java/org/example/repository/task/TaskQueryReposiroty.java
+/Users/adammroczkowski/IdeaProjects/kanban/infrastructure/src/main/java/org/example/repository/project/ProjectCommandRepository.java
+/Users/adammroczkowski/IdeaProjects/kanban/infrastructure/src/main/java/org/example/repository/user/UserCommandRepository.java
+/Users/adammroczkowski/IdeaProjects/kanban/infrastructure/src/main/java/org/example/repository/user/UserQueryRepository.java
+/Users/adammroczkowski/IdeaProjects/kanban/infrastructure/src/main/java/org/example/repository/project/ProjectQueryRepository.java

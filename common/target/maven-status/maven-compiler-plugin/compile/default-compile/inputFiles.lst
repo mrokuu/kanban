@@ -1,0 +1,10 @@
+/Users/adammroczkowski/IdeaProjects/kanban/common/src/main/java/org/example/valueobjects/Description.java
+/Users/adammroczkowski/IdeaProjects/kanban/common/src/main/java/org/example/id/ProjectId.java
+/Users/adammroczkowski/IdeaProjects/kanban/common/src/main/java/org/example/valueobjects/Email.java
+/Users/adammroczkowski/IdeaProjects/kanban/common/src/main/java/org/example/enums/progress/Progress.java
+/Users/adammroczkowski/IdeaProjects/kanban/common/src/main/java/org/example/id/TaskId.java
+/Users/adammroczkowski/IdeaProjects/kanban/common/src/main/java/org/example/valueobjects/NumberWip.java
+/Users/adammroczkowski/IdeaProjects/kanban/common/src/main/java/org/example/id/UserId.java
+/Users/adammroczkowski/IdeaProjects/kanban/common/src/main/java/org/example/valueobjects/Password.java
+/Users/adammroczkowski/IdeaProjects/kanban/common/src/main/java/org/example/valueobjects/Name.java
+/Users/adammroczkowski/IdeaProjects/kanban/common/src/main/java/org/example/valueobjects/Priority.java
