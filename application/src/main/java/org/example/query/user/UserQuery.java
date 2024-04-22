@@ -24,7 +24,7 @@ public class UserQuery {
         return userQueryRepository.findById(id).orElse(null);
     }
 
-    public User getUserByEmail(String email) {
-        return userQueryRepository.findByEmail(email);
-    }
+//    public User getUserByEmail(String email) {
+//        return userQueryRepository.findByEmail(email);
+//    }
 }

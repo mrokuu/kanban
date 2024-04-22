@@ -20,34 +20,11 @@ public class UserCommandController extends BaseController {
         super(mediator);
     }
 
-//    private final UserCommand userCommand;
-
-//    @PostMapping("/create")
-//    public ResponseEntity<User> createUser(@RequestBody User user){
-//        user = userCommand.createUser(user);
-//
-//        if (user != null) {
-//            return new ResponseEntity<>(user, HttpStatus.CREATED);
-//        } else {
-//            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-//        }
-//    }
-
     @PostMapping("/create")
     public ResponseEntity<DataResult<UserDto>> createTask(@RequestBody CreateUserCommand command){
         return ResponseEntity.ok(mediator.send(command));
     }
 
-//    @PutMapping("/update")
-//    public ResponseEntity<User> updateUser(@RequestBody User user){
-//        user = userCommand.updateUser(user);
-//
-//        if (user != null) {
-//            return new ResponseEntity<>(user, HttpStatus.OK);
-//        } else {
-//            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-//        }
-//    }
 
     @PutMapping("/update")
     public ResponseEntity<DataResult<UserDto>> updateTask(@RequestBody UpdateTaskCommand command){

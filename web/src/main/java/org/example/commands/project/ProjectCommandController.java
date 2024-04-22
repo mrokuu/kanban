@@ -17,41 +17,15 @@ import java.util.UUID;
 @RequestMapping("/api/project")
 //@RequiredArgsConstructor
 public class ProjectCommandController extends BaseController {
-//    private final ProjectCommand projectCommand;
-
     public ProjectCommandController(Mediator mediator) {
         super(mediator);
     }
 
-//    @PostMapping("/create")
-//    public ResponseEntity<Project> createProject(@RequestBody Project project){
-//        project = projectCommand.createProject(project);
-//
-//        if (project != null) {
-//            return new ResponseEntity<>(project, HttpStatus.CREATED);
-//        } else {
-//            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-//        }
-//    }
 
     @PostMapping("/create")
     public ResponseEntity<DataResult<ProjectDto>> createProject(@RequestBody CreateProjectCommand command){
     return ResponseEntity.ok(mediator.send(command));
     }
-
-
- 
-
-//    @PutMapping("/update")
-//    public ResponseEntity<Project> updateProject(@RequestBody Project project){
-//        project = projectCommand.updateProject(project);
-//
-//        if (project != null) {
-//            return new ResponseEntity<>(project, HttpStatus.OK);
-//        } else {
-//            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-//        }
-//    }
 
         @PutMapping("/update")
     public ResponseEntity<DataResult<ProjectDto>> updateProject(@RequestBody UpdateProjectCommand command){

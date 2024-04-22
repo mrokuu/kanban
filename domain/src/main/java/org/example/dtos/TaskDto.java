@@ -12,7 +12,8 @@ import java.util.Set;
 import java.util.UUID;
 
 @Builder
-public record TaskDto(UUID id,
+public record TaskDto(
+                    UUID id,
                       Name name,
                       Description description,
                       Priority priority,

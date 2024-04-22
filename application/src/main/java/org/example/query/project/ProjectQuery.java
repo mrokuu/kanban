@@ -19,15 +19,15 @@ public class ProjectQuery {
         return projectQueryRepository.findAll(Sort.by(Sort.Order.desc("id")));
     }
 
-    public Project getProject(UUID id) {
+    public Project getProject(ProjectId id) {
         return projectQueryRepository.findById(id).orElse(null);
     }
 
-    public List<Project> findAllByLeaderUserId(UUID id) {
+    public List<Project> findAllByLeaderUserId(ProjectId id) {
         return projectQueryRepository.findAllByLeaderUserId(id);
     }
 
-    public List<Project> findAllByUsersId(UUID id) {
+    public List<Project> findAllByUsersId(ProjectId id) {
         return projectQueryRepository.findAllByUsersId(id);
     }
 }

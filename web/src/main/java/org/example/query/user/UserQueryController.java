@@ -37,14 +37,14 @@ public class UserQueryController {
         }
     }
 
-    @GetMapping("/email/{email}")
-    public ResponseEntity<User> getUserByEmail(@PathVariable("email") String email) {
-        User user = userQuery.getUserByEmail(email);
-
-        if (user != null) {
-            return new ResponseEntity<>(user, HttpStatus.OK);
-        } else {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
-    }
+//    @GetMapping("/email/{email}")
+//    public ResponseEntity<User> getUserByEmail(@PathVariable("email") String email) {
+//        User user = userQuery.getUserByEmail(email);
+//
+//        if (user != null) {
+//            return new ResponseEntity<>(user, HttpStatus.OK);
+//        } else {
+//            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+//        }
+//    }
 }

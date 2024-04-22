@@ -1,2 +1,4 @@
-package org.example.query.comment;public class CommentQueryController {
+package org.example.query.comment;
+
+public class CommentQueryController {
 }

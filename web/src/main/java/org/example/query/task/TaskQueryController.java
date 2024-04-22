@@ -3,6 +3,7 @@ package org.example.query.task;
 
 import lombok.RequiredArgsConstructor;
 import org.example.entities.task.Task;
+import org.example.id.TaskId;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -44,19 +45,19 @@ public class TaskQueryController {
 
         return new ResponseEntity<>(tasks, HttpStatus.OK);
     }
+//
+//    @GetMapping("/allByProject/{id}")
+//    public ResponseEntity<List<Task>> findAllByProjectId(@PathVariable("id") UUID id) {
+//        List<Task> tasks = taskQuery.findAllByProjectId(id);
+//
+//        return new ResponseEntity<>(tasks, HttpStatus.OK);
+//    }
 
-    @GetMapping("/allByProject/{id}")
-    public ResponseEntity<List<Task>> findAllByProjectId(@PathVariable("id") UUID id) {
-        List<Task> tasks = taskQuery.findAllByProjectId(id);
-
-        return new ResponseEntity<>(tasks, HttpStatus.OK);
-    }
-
-    @GetMapping("/allByProjectAndUser/{projectId}/{user_ID}")
-    public ResponseEntity<List<Task>> findAllByProjectIdAndUsersId(@PathVariable("projectId") UUID project_ID, @PathVariable("user_ID") UUID user_ID) {
-        List<Task> tasks = taskQuery.findAllByProjectIdAndUsersId(project_ID, user_ID);
-
-        return new ResponseEntity<>(tasks, HttpStatus.OK);
-    }
+//    @GetMapping("/allByProjectAndUser/{projectId}/{userId}")
+//    public ResponseEntity<List<Task>> findAllByProjectIdAndUsersId(@PathVariable("projectId") UUID projectId, @PathVariable("userId") UUID userId) {
+//        List<Task> tasks = taskQuery.findAllByProjectIdAndUsersId(projectId, userId);
+//
+//        return new ResponseEntity<>(tasks, HttpStatus.OK);
+//    }
 
 }

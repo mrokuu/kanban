@@ -8,8 +8,8 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 import java.util.UUID;
 @Repository
-public interface ProjectQueryRepository extends JpaRepository<Project, UUID> {
-    List<Project> findAllByLeaderUserId(UUID id);
+public interface ProjectQueryRepository extends JpaRepository<Project, ProjectId> {
+    List<Project> findAllByLeaderUserId(ProjectId id);
 
-    List<Project> findAllByUsersId(UUID id);
+    List<Project> findAllByUsersId(ProjectId id);
 }

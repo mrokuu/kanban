@@ -29,7 +29,7 @@ public class ProjectQueryController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Project> getProject(@PathVariable("id") UUID id) {
+    public ResponseEntity<Project> getProject(@PathVariable("id") ProjectId id) {
         Project project = projectQuery.getProject(id);
 
         if (project != null) {
@@ -40,14 +40,14 @@ public class ProjectQueryController {
     }
 
     @GetMapping("/allByLeaderUser/{id}")
-    public ResponseEntity<List<Project>> findAllByLeaderUser_Id(@PathVariable("id") UUID id) {
+    public ResponseEntity<List<Project>> findAllByLeaderUser_Id(@PathVariable("id") ProjectId id) {
         List<Project> projects = projectQuery.findAllByLeaderUserId(id);
 
         return new ResponseEntity<>(projects, HttpStatus.OK);
     }
 
     @GetMapping("/allByUser/{id}")
-    public ResponseEntity<List<Project>> findAllByUsers_Id(@PathVariable("id") UUID id) {
+    public ResponseEntity<List<Project>> findAllByUsers_Id(@PathVariable("id") ProjectId id) {
         List<Project> projects = projectQuery.findAllByUsersId(id);
 
         return new ResponseEntity<>(projects, HttpStatus.OK);

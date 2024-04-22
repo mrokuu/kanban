@@ -28,6 +28,7 @@ public class Project
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
+
     @Embedded
     @AttributeOverrides({
             @AttributeOverride(name = "value", column = @Column(name = "name", nullable = false))

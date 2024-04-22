@@ -11,5 +11,5 @@ public interface TaskQueryReposiroty extends JpaRepository<Task, UUID> {
 
     List<Task> findAllByProjectId(UUID id);
 
-    List<Task> findAllByProjectIdAndUsersId(UUID projectId, Long userId);
+    List<Task> findAllByProjectIdAndUsersId(UUID projectId, UUID userId);
 }
