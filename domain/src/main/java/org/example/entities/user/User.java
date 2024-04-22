@@ -51,10 +51,10 @@ private UUID id;
     @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate registrationDate;
 
-    @ManyToMany(mappedBy = "users")
+    @ManyToMany(mappedBy = "users", cascade = CascadeType.ALL)
     private Set<Project> projects = new HashSet<>();
 
-    @ManyToMany(mappedBy = "users")
+    @ManyToMany(mappedBy = "users", cascade = CascadeType.ALL)
     private Set<Task> tasks = new HashSet<>();
 
 

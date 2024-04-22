@@ -49,7 +49,7 @@ public class UserCommandController extends BaseController {
 //        }
 //    }
 
-
+    @PutMapping("/update")
     public ResponseEntity<DataResult<UserDto>> updateTask(@RequestBody UpdateTaskCommand command){
         return ResponseEntity.ok(mediator.send(command));
     }

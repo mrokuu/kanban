@@ -45,4 +45,10 @@ public class TaskCommandController  extends BaseController  {
 //            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 //        }
 //    }
+
+    @PutMapping("/update")
+    public ResponseEntity<DataResult<TaskDto>> update(@RequestBody UpdateTaskCommand command){
+        return ResponseEntity.ok(mediator.send(command));
+    }
+
 }
