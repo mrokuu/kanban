@@ -11,11 +11,11 @@ import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-public class UpdateTaskCommandHandler implements RequestHandler<CreateTaskCommand, DataResult<TaskDto>> {
+public class UpdateTaskCommandHandler implements RequestHandler<UpdateTaskCommand, DataResult<TaskDto>> {
 
     private final TaskCommandRepository taskCommandRepository;
     @Override
-    public DataResult<TaskDto> handle(CreateTaskCommand command) {
+    public DataResult<TaskDto> handle(UpdateTaskCommand command) {
 
         Task task = taskCommandRepository.save(mapToCreateTask(command));
         return new SuccessDataResult<>(maptoTaskDto(task), "Task has been created!!!");
@@ -34,7 +34,7 @@ public class UpdateTaskCommandHandler implements RequestHandler<CreateTaskComman
                 .build();
     }
 
-    private Task mapToCreateTask(CreateTaskCommand command) {
+    private Task mapToCreateTask(UpdateTaskCommand command) {
         return Task.builder()
                 .id(command.id())
                 .description(command.description())

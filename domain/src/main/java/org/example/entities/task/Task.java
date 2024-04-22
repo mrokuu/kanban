@@ -49,13 +49,12 @@ public class Task {
 
     private Progress progress;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "project_id", nullable = false)
     private Project project;
 
-    @ManyToMany(
-            cascade = {CascadeType.MERGE, CascadeType.PERSIST}
-    )
+
+    @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(
             name = "tasks_users",
             joinColumns = @JoinColumn(name = "task_id"),

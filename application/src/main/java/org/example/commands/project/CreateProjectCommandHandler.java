@@ -28,7 +28,8 @@ public class CreateProjectCommandHandler implements RequestHandler<CreateProject
                 .projectId(project.getId())
                 .name(project.getName())
                 .description(project.getDescription())
-                .numberWip(project.getNumberWip())
+                .startedLocalDate(project.getStartedLocalDate())
+                .finishedLocalDate(project.getStartedLocalDate())
                 .users(project.getUsers())
                 .build();
     }
@@ -38,7 +39,8 @@ public class CreateProjectCommandHandler implements RequestHandler<CreateProject
                 .id(command.projectId())
                 .name(command.name())
                 .description(command.description())
-                .numberWip(command.numberWip())
+                .startedLocalDate(command.startedLocalDate())
+                .finishedLocalDate(command.finishedLocalDate())
                 .leaderUser(command.user())
                 .users(command.users())
                 .build();

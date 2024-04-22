@@ -11,6 +11,7 @@ import org.example.valueobjects.Description;
 import org.example.valueobjects.Name;
 import org.example.valueobjects.NumberWip;
 
+import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.UUID;
@@ -37,18 +38,15 @@ public class Project
             @AttributeOverride(name = "value", column = @Column(name = "description", nullable = false))
     })
     private Description description;
-    @Embedded
-    @AttributeOverrides({
-            @AttributeOverride(name = "value", column = @Column(name = "numberWip", nullable = false))
-    })
-    private NumberWip numberWip;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    private LocalDate startedLocalDate;
+    private LocalDate finishedLocalDate;
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "leader_user_id")
     private User leaderUser;
 
-    @ManyToMany(
-            cascade = {CascadeType.MERGE, CascadeType.PERSIST}
-    )
+    @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(
             name = "projects_users",
             joinColumns = @JoinColumn(name = "project_id"),

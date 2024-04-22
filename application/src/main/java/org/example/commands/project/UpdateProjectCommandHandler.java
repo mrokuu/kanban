@@ -27,7 +27,8 @@ public class UpdateProjectCommandHandler implements RequestHandler<UpdateProject
                 .projectId(project.getId())
                 .name(project.getName())
                 .description(project.getDescription())
-                .numberWip(project.getNumberWip())
+                .startedLocalDate(project.getStartedLocalDate())
+                .finishedLocalDate(project.getFinishedLocalDate())
                 .users(project.getUsers())
                 .build();
     }
@@ -37,7 +38,8 @@ public class UpdateProjectCommandHandler implements RequestHandler<UpdateProject
                 .id(command.projectId())
                 .name(command.name())
                 .description(command.description())
-                .numberWip(command.numberWip())
+                .startedLocalDate(command.startedLocalDate())
+                .finishedLocalDate(command.finishedLocalDate())
                 .leaderUser(command.user())
                 .users(command.users())
                 .build();

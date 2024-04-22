@@ -8,6 +8,7 @@ import org.example.valueobjects.Description;
 import org.example.valueobjects.Name;
 import org.example.valueobjects.NumberWip;
 
+import java.time.LocalDate;
 import java.util.Set;
 import java.util.UUID;
 
@@ -16,7 +17,8 @@ public record CreateProjectCommand (
         UUID projectId,
         Name name,
         Description description,
-        NumberWip numberWip,
+        LocalDate startedLocalDate,
+        LocalDate finishedLocalDate,
         User user,
         Set<User> users
 
