@@ -3,10 +3,7 @@ package org.example.entities.user;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.example.entities.project.Project;
 import org.example.id.UserId;
 import org.example.entities.task.Task;
@@ -25,6 +22,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @Entity(name = "users")
 @JsonIgnoreProperties({"projects", "tasks"})
+@Builder
 public class User {
 //
 //    @EmbeddedId
