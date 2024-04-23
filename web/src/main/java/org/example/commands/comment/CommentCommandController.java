@@ -15,12 +15,12 @@ public class CommentCommandController extends BaseController {
         super(mediator);
     }
 
-    @PostMapping("/create")
+    @PostMapping()
     public ResponseEntity<DataResult<CommentDto>> createComment(@RequestBody CreateCommentCommand command){
         return ResponseEntity.ok(mediator.send(command));
     }
 
-    @PutMapping("/update")
+    @PutMapping()
     public ResponseEntity<DataResult<CommentDto>> updateComment(@RequestBody CreateCommentCommand command){
         return ResponseEntity.ok(mediator.send(command));
     }

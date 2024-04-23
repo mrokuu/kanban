@@ -17,12 +17,12 @@ public class ProjectCommandController extends BaseController {
     }
 
 
-    @PostMapping("/create")
+    @PostMapping()
     public ResponseEntity<DataResult<ProjectDto>> createProject(@RequestBody CreateProjectCommand command){
     return ResponseEntity.ok(mediator.send(command));
     }
 
-        @PutMapping("/update")
+    @PutMapping()
     public ResponseEntity<DataResult<ProjectDto>> updateProject(@RequestBody UpdateProjectCommand command){
       return ResponseEntity.ok(mediator.send(command));
     }

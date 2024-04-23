@@ -15,13 +15,13 @@ public class UserCommandController extends BaseController {
         super(mediator);
     }
 
-    @PostMapping("/create")
+    @PostMapping()
     public ResponseEntity<DataResult<UserDto>> createTask(@RequestBody CreateUserCommand command){
         return ResponseEntity.ok(mediator.send(command));
     }
 
 
-    @PutMapping("/update")
+    @PutMapping()
     public ResponseEntity<DataResult<UserDto>> updateTask(@RequestBody UpdateTaskCommand command){
         return ResponseEntity.ok(mediator.send(command));
     }

@@ -1,4 +1,4 @@
-package org.example.webSocket;
+package org.example.commands.webSocket;
 
 import org.example.BaseController;
 import org.example.entities.task.Task;
@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @CrossOrigin
-public class WebSocketController extends BaseController {
+public class WebSocketCommandController extends BaseController {
 
-    public WebSocketController(Mediator mediator) {
+    public WebSocketCommandController(Mediator mediator) {
         super(mediator);
     }
 
