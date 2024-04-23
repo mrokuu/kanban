@@ -2,10 +2,8 @@ package org.example.dtos;
 
 import lombok.Builder;
 import org.example.entities.user.User;
-import org.example.id.ProjectId;
 import org.example.valueobjects.Description;
 import org.example.valueobjects.Name;
-import org.example.valueobjects.NumberWip;
 
 import java.time.LocalDate;
 import java.util.Set;
