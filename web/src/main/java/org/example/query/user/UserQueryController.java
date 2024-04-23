@@ -2,6 +2,7 @@ package org.example.query.user;
 
 import lombok.RequiredArgsConstructor;
 import org.example.entities.user.User;
+import org.example.valueobjects.Email;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -37,14 +38,14 @@ public class UserQueryController {
         }
     }
 
-//    @GetMapping("/email/{email}")
-//    public ResponseEntity<User> getUserByEmail(@PathVariable("email") String email) {
-//        User user = userQuery.getUserByEmail(email);
-//
-//        if (user != null) {
-//            return new ResponseEntity<>(user, HttpStatus.OK);
-//        } else {
-//            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-//        }
-//    }
+    @GetMapping("/email/{email}")
+    public ResponseEntity<User> getUserByEmail(@PathVariable("email") Email email) {
+        User user = userQuery.getUserByEmail(email);
+
+        if (user != null) {
+            return new ResponseEntity<>(user, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
 }

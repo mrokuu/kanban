@@ -25,14 +25,15 @@ public class TaskQuery {
     public List<Task> findAllByUsersId(UUID id){
         return taskQueryReposiroty.findAllByUsersId(id);
     }
-//
-//    public List<Task> findAllByProjectId(UUID id){
-//        return taskQueryReposiroty.findAllByProjectId(id);
-//    }
-//
-//    public List<Task> findAllByProjectIdAndUsersId(UUID prjectId, UUID userId){
-//        return taskQueryReposiroty.findAllByProjectIdAndUsersId(prjectId, userId);
-//    }
+
+    public List<Task> findAllByProjectId(UUID id) {
+        return taskQueryReposiroty.findAllByProjectId(id);
+    }
+
+    public List<Task> findAllByProjectIdAndUsersId(UUID projectId, UUID userId) {
+        return taskQueryReposiroty.findAllByProjectIdAndUsersId(projectId,userId);
+    }
+
 
 
 }

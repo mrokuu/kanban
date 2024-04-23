@@ -45,19 +45,19 @@ public class TaskQueryController {
 
         return new ResponseEntity<>(tasks, HttpStatus.OK);
     }
-//
-//    @GetMapping("/allByProject/{id}")
-//    public ResponseEntity<List<Task>> findAllByProjectId(@PathVariable("id") UUID id) {
-//        List<Task> tasks = taskQuery.findAllByProjectId(id);
-//
-//        return new ResponseEntity<>(tasks, HttpStatus.OK);
-//    }
 
-//    @GetMapping("/allByProjectAndUser/{projectId}/{userId}")
-//    public ResponseEntity<List<Task>> findAllByProjectIdAndUsersId(@PathVariable("projectId") UUID projectId, @PathVariable("userId") UUID userId) {
-//        List<Task> tasks = taskQuery.findAllByProjectIdAndUsersId(projectId, userId);
-//
-//        return new ResponseEntity<>(tasks, HttpStatus.OK);
-//    }
+    @GetMapping("/allByProject/{id}")
+    public ResponseEntity<List<Task>> findAllByProjectId(@PathVariable("id") UUID id) {
+        List<Task> tasks = taskQuery.findAllByProjectId(id);
+
+        return new ResponseEntity<>(tasks, HttpStatus.OK);
+    }
+
+    @GetMapping("/allByProjectAndUser/{projectId}/{userId}")
+    public ResponseEntity<List<Task>> findAllByProjectIdAndUsersId(@PathVariable("projectId") UUID projectId, @PathVariable("userId") UUID userId) {
+        List<Task> tasks = taskQuery.findAllByProjectIdAndUsersId(projectId, userId);
+
+        return new ResponseEntity<>(tasks, HttpStatus.OK);
+    }
 
 }

@@ -4,6 +4,7 @@ package org.example.query.user;
 import lombok.RequiredArgsConstructor;
 import org.example.repository.user.UserQueryRepository;
 import org.example.entities.user.User;
+import org.example.valueobjects.Email;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
@@ -22,6 +23,10 @@ public class UserQuery {
 
     public User getUser(UUID id) {
         return userQueryRepository.findById(id).orElse(null);
+    }
+
+    public User getUserByEmail(Email email) {
+        return userQueryRepository.findByEmail(email);
     }
 
 //    public User getUserByEmail(String email) {
