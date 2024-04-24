@@ -1,4 +1,4 @@
-package org.example.entities.ProjectStatistics;
+package org.example.entities.projectStatistics;
 
 import jakarta.persistence.AttributeOverride;
 import jakarta.persistence.AttributeOverrides;

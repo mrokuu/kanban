@@ -1,5 +1,7 @@
 package org.example.commands.project;
 
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import org.example.dispacher.Handler;
 import org.example.dispacher.Request;
 import org.example.entities.user.User;
@@ -13,7 +15,7 @@ import java.util.UUID;
 @Handler(handler = CreateProjectCommandHandler.class)
 public record CreateProjectCommand (
         UUID projectId,
-        Name name,
+        @NotNull @Size(min = 2) Name name,
         Description description,
         LocalDate startedLocalDate,
         LocalDate finishedLocalDate,
